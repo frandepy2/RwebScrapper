@@ -29,5 +29,5 @@ df <- data.frame(Tags = datos_completos)
 tb <- table(df$Tags)
 dfFinal <- data.frame(tb)
 dfFinal <- dfFinal[order(dfFinal$Freq, decreasing = TRUE),]
-
-p <- ggplot(data = dfFinal[1:10,],aes(x=reorder(Var1, -Freq),y = Freq)) + geom_bar(stat = "identity", position = "stack")
+print(dfFinal)
+p <- ggplot(data = dfFinal[1:20,],aes(x=reorder(Var1, -Freq),y = Freq)) + geom_bar(stat = "identity", position = "stack")
